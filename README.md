@@ -108,7 +108,13 @@ Our API Endpoints can be used by anyone that knows the URL and API structure. In
 3. Start your server and verify that the configuration works as expected:
 
    * Open Endpoint: [Health Controller](http://localhost:8080/v1/health)
+   
+   ![img](pruebas/p1health.jpg)
+   
+   
    * Secured Endpoint: [Users' List](http://localhost:8080/v1/user)
+   
+   ![img](pruebas/p1user.jpg)
 
 ### Part 2: Implementing the Authentication Controller
 
@@ -314,6 +320,11 @@ Our API Endpoints can be used by anyone that knows the URL and API structure. In
     .antMatchers( HttpMethod.POST,"/v1/user" ).permitAll()
    ```
 6. Verify the authentication endpoint by sending the credentials of the user created in 5.
+
+![img](pruebas/p2mongodb.jpg)
+
+
+![img](pruebas/p2passwordhash.jpg)
 
 ### Part 3: Implement JWT Request Filter
 
@@ -633,6 +644,8 @@ class SecurityConfiguration : WebSecurityConfigurerAdapter() {
          Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MTMwZmMzMWYwNTk2YzE0YzRiOWY5NTMiLCJhZGFfcm9sZXMiOlsiVVNFUiJdLCJpYXQiOjE2MzA2MDAzMjAsImV4cCI6MTYzMDY4NjcyMH0.s29NZMHYDCsCXqj9W9ZajNnlwyzW4qJG832Z3PXhwhk
       ```
 
+	![img](pruebas/p3auth.jpg)
+	
 ### Challenge Yourself: Implement a mechanism to support Application tokens
 
 1. Implement a new method in the *AuthController* that receives an encrypted secret and verify that the secret is the
@@ -642,6 +655,11 @@ class SecurityConfiguration : WebSecurityConfigurerAdapter() {
    ***Tip***: Divide this problem into smaller problems. Once you solve each problem test your solution and only continue
    if it works.
 
-    
+## Licencia & Derechos de Autor
+
+[Jairo Pulido](https://github.com/Killersys)
+**©** Estudiante de Ingeniería de Sistemas de la [Escuela Colombiana de Ingeniería Julio Garavito](https://www.escuelaing.edu.co/es/).
+
+Licencia bajo la [MIT License](https://github.com/Killersys/IETI-LAB3/blob/codelab-implementation/LICENSE).
 
 
